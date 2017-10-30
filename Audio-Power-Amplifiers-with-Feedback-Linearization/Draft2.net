@@ -1,0 +1,15 @@
+* Z:\media\gallop\Data\_third_year\ece331\labs\lab5\LTSpice_Lab5\Draft2.asc
+V1 Vin 0 SINE(0 1 1k)
+V2 N001 0 5
+V3 N004 0 -5
+R1 N002 Vin R
+R2 Vin N003 R
+R3 N003 N004 R
+R4 N001 N002 R
+R5 Vin Vout R
+XU1 Vout N002 N001 IRF9510_EX
+XU2 Vout N003 N004 IRF510_EX
+.lib /home/gallop/.wine/dosdevices/c:/Program Files (x86)/LTC/LTspiceIV/lib/sym/circuit_sim/ECE331_354.lib
+.tran 0 50m 0 1u
+.backanno
+.end
